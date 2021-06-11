@@ -1,0 +1,22 @@
+.team-card {
+    max-width: 25rem;
+    margin: auto;
+}
+
+.team-card-img {
+    max-width: 15.625rem;
+    margin: auto;
+}
+
+#team-container {
+    background-color: #d753ff;
+    box-shadow: 2px 2px 20px #00000052;
+    cursor: pointer;
+    opacity: 0.65;
+    border-radius: 15px;
+    transition: all 800ms;
+}
+
+#team-container:hover {
+    opacity: 3;
+}
