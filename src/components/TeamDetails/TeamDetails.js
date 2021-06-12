@@ -9,6 +9,7 @@ import femaleTeam from '../../Assets/Images/female.png'
 import Navbar from '../Navbar/Navbar';
 import Footer from '../Footer/Footer';
 
+
 const TeamDetails = () => {
     const { teamId } = useParams();     // using useParams
 
@@ -23,7 +24,7 @@ const TeamDetails = () => {
                 setTeamDetails(data.teams[0]);
             })
     }, [teamId])
-
+    
     return (
         <div className="team-body">
             <div>
@@ -56,7 +57,8 @@ const TeamDetails = () => {
                         {/* Conditional check */}
                         <div className="col-md-7 p-3">
                             {
-                                teamDetails.strGender === "Male" || "male" ? <img className="team-details-img" src={maleTeam} alt="male-team-image" /> : <img className="team-details-img" src={femaleTeam} alt="female-team-image" />
+                                teamDetails.strGender === "Male" || "male" ? 
+                                <img className="team-details-pic" src={maleTeam} alt = "male_Image"/> : <img className="team-details-pic" src={femaleTeam} alt ="female_Image"/>
                             }
                         </div>
                     </div>
@@ -74,9 +76,9 @@ const TeamDetails = () => {
             <div className="container text-center pb-5">
                 <div className="row">
                     <div className="col">
-                        <a href={`https://${teamDetails.strTwitter}`} target="_blank" className="twitter"><FontAwesomeIcon icon={faTwitterSquare} size="2x" /></a>
-                        <a href={`https://${teamDetails.strFacebook}`} target="_blank" className="facebook mx-3"><FontAwesomeIcon icon={faFacebookSquare} size="2x" /></a>
-                        <a href={`https://${teamDetails.strInstagram}`} target="_blank" className="instagram ms-3"><FontAwesomeIcon icon={faInstagramSquare} size="2x" /></a>
+                        <a href={`https://${teamDetails.strTwitter}`} target="/_blank" className="twitter"><FontAwesomeIcon icon={faTwitterSquare} size="2x" /></a>
+                        <a href={`https://${teamDetails.strFacebook}`} target="/_blank" className="facebook mx-3"><FontAwesomeIcon icon={faFacebookSquare} size="2x" /></a>
+                        <a href={`https://${teamDetails.strInstagram}`} target="/_blank" className="instagram ms-3"><FontAwesomeIcon icon={faInstagramSquare} size="2x" /></a>
                         
                     </div>
                 </div>
