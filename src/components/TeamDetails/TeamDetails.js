@@ -20,9 +20,7 @@ const TeamDetails = () => {
         const url = `https://www.thesportsdb.com/api/v1/json/1/lookupteam.php?id=${teamId}`
         fetch(url)
             .then(response => response.json())
-            .then(data => {
-                setTeamDetails(data.teams[0]);
-            })
+            .then(data => {setTeamDetails(data.teams[0])})
     }, [teamId])
     
     return (
@@ -34,7 +32,6 @@ const TeamDetails = () => {
                 <div className="">
                     <div className="">
                         <img className="banner-img" src={teamDetails.strTeamFanart3} alt="team-banner" />
-                        {/* <img className="banner-img" src={teamDetails.strTeamBanner} alt="team-banner" /> */}
                     </div>
                 </div>
                 <div>
